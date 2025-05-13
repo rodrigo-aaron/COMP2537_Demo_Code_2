@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <h1 class="mb-3">Users</h1>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(user => { %>
+          <%- include('templates/user', {user: user, currentUser: currentUser}) %>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mt-4">
+    <a href="/" class="btn btn-secondary">Back to Home</a>
+  </p>
+</div>

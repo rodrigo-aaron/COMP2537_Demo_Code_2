@@ -1,0 +1,17 @@
+<div class="container">
+    <% if (authenticated) { %>
+        <h1>Hello, <%= username %>!</h1>
+        <div class="mt-3">
+            <a href="/members" class="btn btn-primary">Go to Members Area</a>
+        </div>
+        <div class="mt-2">
+            <a href="/logout" class="btn btn-danger">Log out</a>
+        </div>
+    <% } else { %>
+        <h1>Welcome!</h1>
+        <div class="d-flex gap-2 mt-3">
+            <a href="/createUser" class="btn btn-primary">Sign up</a>
+            <a href="/login" class="btn btn-success">Log in</a>
+        </div>
+    <% } %>
+</div>

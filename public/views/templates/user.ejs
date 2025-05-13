@@ -1,0 +1,14 @@
+<tr>
+  <td><%= user.username %></td>
+    <td>
+    <% if (user.username !== currentUser) { %>
+      <% if (user.user_type === 'admin') { %>
+        <a href="/demote/<%= user.username %>" class="btn btn-warning btn-sm">Demote to User</a>
+      <% } else { %>
+        <a href="/promote/<%= user.username %>" class="btn btn-primary btn-sm">Promote to Admin</a>
+      <% } %>
+    <% } else { %>
+      <span class="text-muted">(Current user)</span>
+    <% } %>
+  </td>
+</tr>
